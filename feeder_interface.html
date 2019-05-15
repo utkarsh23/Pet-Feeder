@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- Meta Tags -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Personal Website">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Utkarsh Patil">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<!-- JS Files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body class="deep-purple">
+	<div class="container">
+		<h1 class="white-text center">IoT Pet Feeder</h1>
+		<p class="white-text">Motion detected!</p>
+		<p class="white-text">Detected a dog!</p>
+		<div class="input-field col s6">
+          <input placeholder="Enter IP" id="ip_address" type="text" class="validate white-text">
+        </div>
+		<a id="feed-obj" class="waves-effect waves-light btn deep-purple darken-4 center">FEED</a>
+		<br />
+		<h4 class="white-text right">Project by Farris, Melroy, Utkarsh &amp; Vaishnavi.</h4>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#feed-obj').click(function() {
+				window.location.href = "http://" + $('#ip_address').val() + "/?FEED";
+			});
+		});
+	</script>
+</body>
